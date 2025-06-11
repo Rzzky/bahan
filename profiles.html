@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auto Change Cookies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 300px;
+      max-width: 360px;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #e0f7fa, #ffffff);
+      padding: 16px;
+      color: #333;
+    }
+
+    .header {
+      background: linear-gradient(to right, #00bcd4, #007c91);
+      color: white;
+      padding: 12px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h2 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    th {
+      background-color: #0097a7;
+      color: white;
+      padding: 12px;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px 12px;
+    }
+
+    input[type="textbox"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+      transition: 0.2s ease;
+    }
+
+    input[type="textbox"]:focus {
+      border-color: #00bcd4;
+      box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+    }
+
+    #profileCreate_button {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #00bcd4;
+      color: white;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    #profileCreate_button:hover {
+      background-color: #007c91;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 11px;
+      color: #777;
+    }
+
+    .footer a {
+      color: #777;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #00bcd4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>
+      <label id="domain_label">Undefined</label> - 
+      (<label id="profile_label">Undefined</label>)
+    </h2>
+  </div>
+
+  <table id="profileTable" class="table table-striped">
+    <tr>
+      <th colspan="2" style="text-align: center;">Auto Change Cookies by RzkyO</th>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="textbox" id="profileName_input" placeholder="New Profile Name" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;">
+        <a href="#" id="profileCreate_button">Create</a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    <span>Made with ❤️ by <a href="https://instagram.com/rizzkyo" target="_blank" rel="noopener noreferrer">RzkyO</a> • <a href="https://github.com/rzzky" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Docs</a></span>
+  </div>
+
+  <script src="scripts/jquery-3.1.1.min.js"></script>
+  <script>
+    // optional: prevent reload from anchor click
+    document.getElementById("profileCreate_button").addEventListener("click", function(e) {
+      e.preventDefault(); // prevent page reload
+    });
+  </script>
+  <script src="profiles.js"></script>
+</body>
+</html>
